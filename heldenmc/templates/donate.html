@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "{%static 'styles/donate.css' %}">
+    <script src="https://kit.fontawesome.com/6a778338a3.js" crossorigin="anonymous"></script>
+    <title>Become a donor</title>
+</head>
+<body>
+    <header>
+        <div id = "navbar">
+            <nav id = "navigation">
+                <ul id = "page-navigation">
+                    <li><a href = "{% url 'index' %}" class = "navlink">Home</a></li>
+                    <li><a href = "{% url 'index' %}" class = "navlink">Articles</a></li>
+                    <li><a href = "{% url 'index' %}" class = "navlink">Community</a></li>
+                    <li><a href = "#home" class = "navlink">Donate</a></li>
+                </ul>
+                <ul id = "external-navigation">
+                    <li><a href = "https://discord.gg/R9XC7zBJXd"><i class="fa-brands fa-discord navlink navimage"></i></a></li>
+                    <li><a href = "instagram.com"><i class="fa-brands fa-instagram navlink navimage"></i></a></li>
+                    <li><a href = "youtube.com"><i class="fa-brands fa-tiktok navlink navimage"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>   
+    <main>
+        <div id = "rank-section">
+            <div class = "rank-option donator">
+                <p class = "title donator-title"><a>Donor</a></p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan orci non posuere molestie. 
+                    Fusce nulla nulla, pretium ut maximus quis, hendrerit auctor magna. Nam eu nunc suscipit, venenatis urna tristique, luctus dolor. 
+                    Ut sed mollis velit. Suspendisse vitae mauris fringilla, tincidunt tortor eu, porta lectus. <br>Donec id risus non elit luctus elementum eget eu urna. 
+                    Cras finibus eu magna in iaculis. In dapibus tristique pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse eu dui non ipsum gravida suscipit. Mauris molestie turpis sit amet consequat venenatis. 
+                    Aenean eget molestie erat. 
+                </p>
+                <button class = "purchase-button" onclick="purchase_donator()">Buy the Donor Rank</button>
+            </div>
+            <div class = "rank-option vip">
+                <p class = "title vip-title"><a>VIP</a></p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan orci non posuere molestie. 
+                    Fusce nulla nulla, pretium ut maximus quis, hendrerit auctor magna. Nam eu nunc suscipit, venenatis urna tristique, luctus dolor. 
+                    Ut sed mollis velit. Suspendisse vitae mauris fringilla, tincidunt tortor eu, porta lectus. <br>Donec id risus non elit luctus elementum eget eu urna. 
+                    Cras finibus eu magna in iaculis. In dapibus tristique pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse eu dui non ipsum gravida suscipit. Mauris molestie turpis sit amet consequat venenatis. 
+                    Aenean eget molestie erat. 
+                </p>
+                <button class = "purchase-button" onclick="purchase_vip()">Buy the VIP Rank</button>
+            </div>
+            <div class = "rank-option vipplus">
+                <p class = "title vipplus-title"><a>VIP+</a></p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan orci non posuere molestie. 
+                    Fusce nulla nulla, pretium ut maximus quis, hendrerit auctor magna. Nam eu nunc suscipit, venenatis urna tristique, luctus dolor. 
+                    Ut sed mollis velit. Suspendisse vitae mauris fringilla, tincidunt tortor eu, porta lectus. <br>Donec id risus non elit luctus elementum eget eu urna. 
+                    Cras finibus eu magna in iaculis. In dapibus tristique pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse eu dui non ipsum gravida suscipit. Mauris molestie turpis sit amet consequat venenatis. 
+                    Aenean eget molestie erat. 
+                </p>
+                <button class = "purchase-button" onclick="purchase_vipplus()">Buy the VIP+ Rank</button>
+            </div>
+        </div>        
+    </main>
+    <footer>
+        
+    </footer> 
+</body>
+</html>

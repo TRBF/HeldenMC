@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "{%static 'styles/styles.css' %}">
+    <script src="https://kit.fontawesome.com/6a778338a3.js" crossorigin="anonymous"></script>
+    <title>HeldenMc</title>
+</head>
+<body>
+    <header>
+        <div id = "navbar">
+            <nav id = "navigation">
+                <ul id = "page-navigation">
+                    <li><a href = "#home" class = "navlink">Home</a></li>
+                    <li><a href = "#articles" class = "navlink">Articles</a></li>
+                    <li><a href = "#community" class = "navlink">Community</a></li>
+                    <li><a href = "donate" class = "navlink">Donate</a></li>
+                </ul>
+                <ul id = "external-navigation">
+                    <li><a href = "https://discord.gg/R9XC7zBJXd"><i class="fa-brands fa-discord navlink navimage"></i></a></li>
+                    <li><a href = "instagram.com"><i class="fa-brands fa-instagram navlink navimage"></i></a></li>
+                    <li><a href = "youtube.com"><i class="fa-brands fa-tiktok navlink navimage"></i></a></li>
+                </ul>
+            </nav>
+            <button id = "display-menu-button" type = "button" onclick= "display_mobile_menu()"><i class="fa-solid fa-bars navlink navimage" id = "menu-link-icon"></i></button>
+        </div>
+        <div id = "navigation-mobile">
+            <div id = "display-button-wrapper"><button id = "close-menu-button" type = "button" onclick= "hide_mobile_menu()"><i class="fa-solid fa-xmark"></i></button></div>
+            <nav id = "mobile-navigation">
+                <ul id = "mobile-page-navigation">
+                    <li id = "mobile-nav-link"><a href = "#top-image" class = "mobile-navlink">Home</a></li>
+                    <li id = "mobile-nav-link"><a href = "#articles" class = "mobile-navlink">Articles</a></li>
+                    <li id = "mobile-nav-link"><a href = "#community" class = "mobile-navlink">Community</a></li>
+                    <li id = "mobile-nav-link"><a href = "#community" class = "mobile-navlink">Donate</a></li>
+                </ul>
+                <ul id = "mobile-external-navigation">
+                    <li id = "mobile-nav-link"><a href = "https://discord.gg/R9XC7zBJXd"><i class="fa-brands fa-discord mobile-navlink"></i></a></li>
+                    <li id = "mobile-nav-link"><a href = "instagram.com"><i class="fa-brands fa-instagram mobile-navlink"></i></a></li>
+                    <li id = "mobile-nav-link"><a href = "tiktok.com"><i class="fa-brands fa-tiktok mobile-navlink"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            function display_mobile_menu(){
+                var mobile_navigation_menu = document.getElementById("navigation-mobile");
+                mobile_navigation_menu.setAttribute("style", "display:grid;");
+            }
+            function hide_mobile_menu(){
+                var mobile_navigation_menu = document.getElementById("navigation-mobile");
+                mobile_navigation_menu.setAttribute("style", "display:none;");
+            }
+        </script>
+        <div id = "home">
+        <img src = "{% static  './images/top-image.png'%}" class = "background layer-0" alt = "Background">
+        <img src = "{% static './images/logo.png'%}" class = "layer-1" id = "top-logo" alt = "HeldenMc Logo">
+        </div>
+    </header>
+    <div id = "articles">
+        <div class = "grid-wrapper">
+            {% for article in articles%}
+            <a class = "update-section-link" href = "#articles">
+                <div class = "update-section">
+                    <img src = "{% static 'images/article-image1.png'%}" class = "article-image primary-image">
+                    <div class = "article-text">
+                        <div class = "article-text">
+                            <p class = "title">{{article.title}}</p>
+                            <p>{{article.content}}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+
+        </div>
+    </div>
+    <script>
+    function copyTextFunctionIP() {
+        navigator.clipboard.writeText("66.59.210.178:25568");
+        alert("Copied IP to clipboard.");
+      } 
+    function copyTextFunctionDiscordLink() {
+        navigator.clipboard.writeText("https://discord.gg/R9XC7zBJXd");
+        alert("Copied discord link to clipboard.");
+      } 
+    </script>
+    <div id = "community">
+        <button type = "button" onclick="copyTextFunctionIP()"><p>Copy our server's IP</p></button>
+        <button type = "button" onclick="copyTextFunctionDiscordLink()"><p>Get a link to the HeldenMc community discord server</p></button>
+    </div>
+<footer>
+    <div class = "inner">
+        <p><a href = "heldenmc.net">HeldenMc</a> & <a href = "https://github.com/TRBF">@TRBF</a> © 2022</p>
+    </div>
+</footer>
+     
+</body>
+</html>
